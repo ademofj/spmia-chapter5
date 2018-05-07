@@ -8,9 +8,9 @@ sudo: required
 services:
 - docker
 notifications:
-  slack: teamcarnell:zhTADgjsb7yJ5RPEd7LPNFwI
+  slack:  
   email:
-  - carnell28@gmail.com
+  - ademo@126.com
   on_success: always
   on_failure: always
 env:
@@ -20,7 +20,7 @@ env:
 script:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - mvn clean package docker:build -U
-  - docker push johncarnell/tmx-licensing-service:chapter5
-  - docker push johncarnell/tmx-organization-service:chapter5
-  - docker push johncarnell/tmx-confsvr:chapter5
-  - docker push johncarnell/tmx-eurekasvr:chapter5
+  - docker push ademo/tmx-licensing-service:chapter5
+  - docker push ademo/tmx-organization-service:chapter5
+  - docker push ademo/tmx-confsvr:chapter5
+  - docker push ademo/tmx-eurekasvr:chapter5
